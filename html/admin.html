@@ -61,10 +61,61 @@
             </div>
           </nav>
           <div class="heading">
-            <h2 class="head">
+            <h2 class="head text-white text-center">
               Admin Page
             </h2>
           </div>
+          <!-- Modal -->
+        <div class="modal-add d-flex justify-content-end p-4">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Add Product
+          </button>
+
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Add new Product</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <h5>Name</h5>
+                          <input type="text"class="modal-input inputN" placeholder="Enter product name...">
+                          <h5>ImageURL</h5>
+                          <input type="" class="modal-input inputI"  placeholder="Enter image URL...">
+                          <h5>Details</h5>
+                          <input type="text" class="modal-input inputD"  placeholder="Enter details of product...">
+                          <h5>Price</h5>
+                          <input type="text" class="modal-input inputP"  placeholder="Enter price...">
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary newproduct">Add New Product</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- table -->
+      <div class=" container-fluid">
+          <table class="text-center text-white">
+              <thead class="header">
+                  <th>Name</th>
+                  <th>Image</th>
+                  <th>Details</th>
+                  <th>Price</th>
+                  <th>Edit</th>
+                  <th>Delete</th>
+              </thead>
+              <tbody id="products">
+              </tbody>
+          </table>
+      </div>
+
     </main>
      <!-- footer -->
   <footer class="container-fluid text-center bg-dark text-white">
@@ -80,7 +131,7 @@
         <img src="https://i.postimg.cc/h40F5gDJ/github-sign.png" alt="Github icon" loading="lazy" class="ficons"></a>
     </div>
     <div class="footer">
-      <p>Copyright &copy Powered by xqcL</p>
+      <p class="m-0">Copyright &copy Powered by xqcL</p>
     </div>
   </footer>
     

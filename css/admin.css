@@ -11,6 +11,31 @@ body{
     background-color: rgb(0, 0, 51);
 }
 
+/* table */
+table{
+    width: 100%;
+}
+
+/* input on modal */
+.modal-input{
+    width: 100%;
+} 
+
+/* tabledata */
+#products{
+    margin-bottom: 2rem;
+}
+
+/* table rows  */
+tr{
+    border: 2px solid rgb(114, 100, 100);
+}
+
+/* images on table */
+.image{
+    width: 10rem;
+}
+
 /* footer  */
 footer{
     position: fixed;
@@ -22,3 +47,5 @@ footer{
 .ficons{
     width: 2rem;
 }
+
+
