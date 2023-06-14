@@ -7,6 +7,10 @@ let tempDet = document.querySelector(".inputD");
 let tempPrice = document.querySelector(".inputP");
 let deskstopName = JSON.parse(localStorage.getItem("desktop")) // getting info from local storage
 let tempID = 11;
+// let editN = document.querySelector(".inputeN")
+// let editI = document.querySelector(".inputeI")
+// let editD = document.querySelector(".inputeD")
+// let editP = document.querySelector(".inputeP")
 
 
 // // Adding to the a new product
@@ -36,21 +40,36 @@ function addProduct(){
     }
 }
 
-// edit button
-function editButtons(){
-    eButton = [...document.querySelectorAll("#ebtn")];
-    eButton.forEach((item)=>{
-        item.addEventListener('click', editProduct)
 
-    })
+// Sort button
+function sortDesktop(){
+    deskstopName = deskstopName.sort((a,b) => {
+        if (a.price < b.price) {
+            return -1 ;
+        } else {
+            return 1;
+        }
+    });
+    result.innerHTML = '';
+    adminProducts()
 }
-function editProduct(item){
-    let start = deskstopName.indexOf(item);
-    this.id = 
-    this.name = //ADD all proteries from desktopName and and temp from top of page to it
+
+
+// edit button
+function Editproduct(item){
+    location.reload();
+    let start = deskstopName.findIndex( p=>{
+        return p.id == item.id
+    });
+    console.log(start);
+    this.name = document.querySelector(`#inputeN${item.id}`).value
+    this.imageUrl = document.querySelector(`#inputeI${item.id}`).value
+    this.details = document.querySelector(`#inputeD${item.id}`).value
+    this.price = document.querySelector(`#inputeP${item.id}`).value 
     deskstopName[start] = Object.assign({}, this)
     localStorage.setItem('desktop', JSON.stringify(deskstopName))
     adminProducts()
+    
 } 
 
 
@@ -83,12 +102,12 @@ deskstopName.forEach((data)=>{
         <td id="td5">${data.price}</td>
         <td id="td6">
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" id="ebtn" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+        <button type="button" class="btn btn-outline-light"  data-bs-toggle="modal" data-bs-target='#editModal${data.id}'>
             Edit
         </button>
 
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal1" tabindex="1" aria-labelledby="exampleModalLabel"
+        <div class="modal fade" id='editModal${data.id}' tabindex="1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -98,23 +117,23 @@ deskstopName.forEach((data)=>{
                     </div>
                     <div class="modal-body">
                         <h5 class="text-black">Name</h5>
-                        <input type="text"class="modal-input" placeholder="Enter name...">
+                        <input type="text"class="modal-input " id='inputeN${data.id}' placeholder="Enter name...">
                         <h5 class="text-black">ImageURL</h5>
-                        <input type="text" class="modal-input"  placeholder="Enter Image URL...">
+                        <input type="text" class="modal-input " id='inputeI${data.id}'  placeholder="Enter Image URL...">
                         <h5 class="text-black">Details</h5>
-                        <input type="text" class="modal-input"  placeholder="Enter details...">
+                        <input type="text" class="modal-input " id='inputeD${data.id}'  placeholder="Enter details...">
                         <h5 class="text-black">Price</h5>
-                        <input type="text" class="modal-input"  placeholder="Enter price...">
+                        <input type="text" class="modal-input" id='inputeP${data.id}'  placeholder="Enter price...">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" onclick='${editProduct(JSON.stringify(data))}'>Save Changes</button>
+                        <button type="button" class="btn btn-secondary" onclick='new Editproduct(${JSON.stringify(data)})' data-bs-dismiss="modal">Save Changes</button>
                     </div>
                 </div>
             </div>
         </div>
         </td>
-        <td id="td7"><button type="button" class="btn btn-primary dbtn" > Delete </button></td>
+        <td id="td7"><button type="button" class="btn btn-outline-light dbtn" > Delete </button></td>
      </tr>
     `
     
