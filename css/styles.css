@@ -15,7 +15,14 @@ body{
 /* welcome heading */
 .welcomebox{
     margin: auto;
-    width: 40%;
+    border-radius: 1rem;
+    background-color: grey;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.heading{
+    margin: auto;
     border-radius: 1rem;
     background-color: grey;
     padding: 1rem;

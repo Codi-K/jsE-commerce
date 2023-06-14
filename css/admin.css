@@ -11,6 +11,14 @@ body{
     background-color: rgb(0, 0, 51);
 }
 
+.heading{
+    margin: auto;
+    border-radius: 1rem;
+    background-color: grey;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
 /* table */
 table{
     width: 100%;

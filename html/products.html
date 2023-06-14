@@ -1,77 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- favicon -->
-    <link rel="shortcut icon" href="https://cdn.7tv.app/emote/61eff3971300d0c637b93d45/1x.webp" type="image/x-icon">
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../css/styles.css">
-    <title>DD - Desktops & Accessories</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="https://cdn.7tv.app/emote/61eff3971300d0c637b93d45/1x.webp" type="image/x-icon">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <title>DD - Desktops & Accessories</title>
 </head>
+
 <body>
-    <!-- main -->
-    <main>
-      <!-- navbar  -->
-        <nav class="navbar text-white navbar-dark bg-dark ">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="../index.html">
-                <!-- Logo -->
-                <img class="img-fluid" src="https://cdn.betterttv.net/emote/5ecbe33cf54be95e2a82ec94/2x.webp" alt="Logo" loading="lazy">
-              </a>
-              <!-- Company Name -->
-              <div>
-                <a class="nav-link" href="../index.html"><h4>Devotion Desktops</h4></a>
+  <!-- main -->
+  <main>
+    <!-- navbar  -->
+    <nav class="navbar text-white navbar-dark bg-dark ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <!-- Logo -->
+          <img class="img-fluid" src="https://cdn.betterttv.net/emote/5ecbe33cf54be95e2a82ec94/2x.webp" alt="Logo"
+            loading="lazy">
+        </a>
+        <!-- Company Name -->
+        <div>
+          <a class="nav-link" href="../index.html">
+            <h4>Devotion Desktops</h4>
+          </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./products.html">Desktops & Accessories</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./checkout.html">Checkout</a>
+              </li>
+              <!-- Dropdown for Admin Page -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  For Administator
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+              </li>
+              <li><a class="dropdown-item" href="./admin.html">Admin Page</a></li>
+            </ul>
+            </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- page heading  -->
+    <div class="heading">
+      <h2 class="head text-white text-center">
+        Desktops & Accessories
+      </h2>
+    </div>
+
+    <div class="contactbtn">
+      <!-- Modal for contact us  -->
+      <div class="modal-add d-flex justify-content-between p-4">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-outline-light " data-bs-toggle="modal" data-bs-target="#exampleModal2">
+          Contact Us
+        </button>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel2">Email us below:</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="../index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link active" href="./products.html">Desktops & Accessories</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./checkout.html">Checkout</a>
-                      </li>
-                      <!-- Dropdown for Admin Page -->
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        For Administator
-                      </a>
-                      <ul class="dropdown-menu dropdown-menu-dark">
-                        </li>
-                        <li><a class="dropdown-item" href="./admin.html">Admin Page</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
+              <div class="modal-body">
+                <form action="https://formspree.io/f/xeqwyaew" method="POST">
+                  <label>
+                    Enter Your Name:
+                    <input type="name" name="name" required>
+                  </label>
+                  <label>
+                    Enter Your Email:
+                    <input type="email" name="email" required>
+                  </label>
+                  <label>
+                    Enter Your Message:
+                    <input type="text" name="message" required>
+                  </label>
+                  <!-- your other form fields go here -->
+
               </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-secondary">Submit</button>
+              </div>
+              </form>
             </div>
-          </nav>
-
-          <div class="contactbtn">
-            <button type="button" class="btn btn-dark " data-bs-toggle="modal" data-bs-target="#exampleModal">
-              Contact Us
-          </button>
           </div>
-          <div id="product">
+        </div>
+        <button type="button" class="btn btn-outline-light sortbtn">
+          Sort
+      </button>
+      </div>
+    </div>
+    <div id="product">
 
-          </div>
+    </div>
 
-    </main>
-     <!-- footer -->
+  </main>
+  <!-- footer -->
   <footer class="container-fluid text-center bg-dark text-white">
     <div class="footer-links">
       <!-- Linked In icon -->
@@ -88,10 +146,13 @@
       <p class="m-0">Copyright &copy Powered by xqcL</p>
     </div>
   </footer>
-    
-    <!-- bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <!-- custom script  -->
-    <script src="../script/products.js"></script>
+
+  <!-- bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <!-- custom script  -->
+  <script src="../script/products.js"></script>
 </body>
+
 </html>

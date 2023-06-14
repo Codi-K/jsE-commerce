@@ -6,70 +6,70 @@ let  deskstopName = JSON.parse(localStorage.getItem("desktop")) ?
 JSON.parse(localStorage.getItem("desktop")) :
 localStorage.setItem("desktop",JSON.stringify([
     {
-    id: " 1 ",
+    id:1,
     name: " ",
     imageUrl: "",
     details: " ",
     price: " ",
     },
     {
-    id: " 2 ",
+    id:2,
     name: "  ",
     imageUrl: " ",
     details: " ",
     price: "",
     },
     {
-    id: " 3 ",
+    id:3,
     name: " ",
     imageUrl: " ",
     details: " ",
     price: " ",
     },
     {
-    id: " 4 ",
+    id:4,
     name: "  ",
     imageUrl: " ",
     details: " ",
     price: " ",
     },
     {
-    id: " 5 ",
+    id:5,
     name: " ",
     imageUrl: " ",
     details: " ",
     price: "  ",
     },
     {
-    id: " 6 ",
+    id:6,
     name: " ",
     imageUrl: " ",
     details: "  ",
     price: "",
     },
      {
-    id: " 7 ",
+    id:7,
     name: " ",
     imageUrl: " ",
     details: "  ",
     price: "",
     },
      {
-    id: " 8 ",
+    id:8,
     name: " ",
     imageUrl: " ",
     details: "  ",
     price: "",
     },
      {
-    id: " 9 ",
+    id:9,
     name: " ",
     imageUrl: " ",
     details: "  ",
     price: "",
     },
      {
-    id: " 10 ",
+    id: 10,
     name: " ",
     imageUrl: " ",
     details: "  ",
@@ -94,7 +94,3 @@ try{
 }catch(e){
     location.reload()
 }
-
-
-
-

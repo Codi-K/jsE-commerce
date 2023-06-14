@@ -60,15 +60,16 @@
               </div>
             </div>
           </nav>
+          <!-- page heading  -->
           <div class="heading">
             <h2 class="head text-white text-center">
               Admin Page
             </h2>
           </div>
           <!-- Modal -->
-        <div class="modal-add d-flex justify-content-end p-4">
+        <div class="modal-add d-flex justify-content-between p-4">
           <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <button type="button" class="btn btn-outline-light " data-bs-toggle="modal" data-bs-target="#exampleModal">
               Add Product
           </button>
 
@@ -94,11 +95,14 @@
                       </div>
                       <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary newproduct">Add New Product</button>
+                          <button type="button" class="btn btn-secondary newproduct">Add New Product</button>
                       </div>
                   </div>
               </div>
           </div>
+          <button type="button" class="btn btn-outline-light" onclick="sortDesktop()">
+            Sort
+        </button>
       </div>
       <!-- table -->
       <div class=" container-fluid">
