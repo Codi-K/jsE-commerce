@@ -96,7 +96,7 @@ deskstopName.forEach((data)=>{
     result.innerHTML +=`
      <tr class="container-fluid">
         <td id="td2">${data.name}</td>
-        <td id="td3"><img class="image-fluid image" src="${data.imageUrl}" loading="lazy" alt="${data.name}"></td>
+        <td id="td3"><img class="image-fluid image"id="image" src="${data.imageUrl}" loading="lazy" alt="${data.name}"></td>
         <td id="td4">${data.details}</td>
         <td id="td5" class="text-success">R${data.price}</td>
         <td id="td6">
