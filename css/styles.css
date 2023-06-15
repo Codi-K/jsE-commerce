@@ -45,3 +45,11 @@ footer{
 .ficons{
     width: 2rem;
 }
+
+
+@media (width < 337px) {
+    .logo{
+        display: none;
+    }
+    
+}
