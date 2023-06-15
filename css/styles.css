@@ -21,6 +21,7 @@ body{
     margin-top: 1rem;
 }
 
+/* headings  */
 .heading{
     margin: auto;
     border-radius: 1rem;
@@ -28,6 +29,13 @@ body{
     padding: 1rem;
     margin-top: 1rem;
 }
+
+/* inputs on contact modal */
+.inputC{
+    width: 100%;
+}
+
+
 
 /* see more heading  */
 .see{
