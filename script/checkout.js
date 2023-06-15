@@ -12,22 +12,23 @@ clearBtn.addEventListener('click', ()=>{
         console.log(checkout);
     })
 
-// checkout
+// checkout local storage
 let dChoosen = JSON.parse(localStorage.getItem("check-out"));
 
-let total = 0
+
 
 // price calculation
-function calculate(){
-    checkout.forEach((item)=>{
-        total= item.price + item.price
-    })
+let calculatePrice = dChoosen.reduce((a,b)=>{
+    return a + b.price
+    
+}, 0)
+let total = calculatePrice
     result2.innerHTML= `
-    <h4 id="total">Total Price = ${total}</h4>
+    <h4 id="total">Total Price = R${total}</h4>
     `
-}
 
 
+// Displaying Choosen products
 Object.keys(dChoosen).forEach( (data) => {
     let deskTops = dChoosen[data];
     result.innerHTML += `
@@ -38,4 +39,3 @@ Object.keys(dChoosen).forEach( (data) => {
     </tr>
     `
 })
-calculate()

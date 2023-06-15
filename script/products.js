@@ -71,7 +71,7 @@ localStorage.setItem("desktop",JSON.stringify([
     },
      {
     id: 10,
-    name: "AMD Ryzen 9X Configurator",
+    name: "AMD 9X Configurator",
     imageUrl: "https://i.postimg.cc/T3sSc2Fr/CS-192-303-400.webp",
     details: "AMD Ryzen™ 9 7900X3D Processor, GeForce RTX™ 4070 Ti 12GB GDDR6X Video Card,  CPU Cooler Corsair 16GB (16GBx1) DDR5/6000MHz Memory, ASRock B650M-C AM5 Micro ATX Motherboard, 2TB Kingston SNV2S/2000G (PCIe Gen4) ",
     price: 41411
@@ -80,7 +80,7 @@ localStorage.setItem("desktop",JSON.stringify([
 )); 
 
 
-
+// Displaying products from local storage
 try{
     deskstopName.forEach((data, index)=>{
         result.innerHTML +=`
@@ -90,7 +90,7 @@ try{
         <div class="card-body">
           <h5 class="card-text">${data.details}</h5>
           <h6 class="card-text p-2 text-success">R${data.price}</h6>
-          <center><button type="button" class="btn btn-primary" onclick='addToCheckout (${JSON.stringify(index)})'>Add to Cart</button></center>
+          <center><button type="button" class="btn btn-outline-light" onclick='addToCheckout (${JSON.stringify(index)})'>Add to Cart</button></center>
         </div>
       </div> 
         `
@@ -107,4 +107,66 @@ function addToCheckout(index) {
   console.log(checkout);
 }
 
+
+                                                  // sort buttons
+
+//price lowest to highest button
+function priceLow(){
+  deskstopName = deskstopName.sort((a,b) => {
+      if (a.price < b.price) {
+          return -1 ;
+      } else {
+          return 1;
+      }
+  });
+  result.innerHTML = '';
+  try{
+    deskstopName.forEach((data, index)=>{
+        result.innerHTML +=`
+        <div class=" card text-bg-dark border-light container-fluid" style="width: 20rem;">
+        <h4>${data.name}</h4>
+        <img src="${data.imageUrl}" class="card-img-top" loading="lazy" alt="${data.name}">
+        <div class="card-body">
+          <h5 class="card-text">${data.details}</h5>
+          <h6 class="card-text p-2 text-success">R${data.price}</h6>
+          <center><button type="button" class="btn btn-outline-light" onclick='addToCheckout (${JSON.stringify(index)})'>Add to Cart</button></center>
+        </div>
+      </div> 
+        `
+        
+    })
+}catch(e){
+    location.reload()
+}
+}
+
+//price highest to lowest button
+function priceHigh(){
+  deskstopName = deskstopName.sort((a,b) => {
+      if (a.price > b.price) {
+          return -1 ;
+      } else {
+          return 1;
+      }
+  });
+  result.innerHTML = '';
+  try{
+    deskstopName.forEach((data, index)=>{
+        result.innerHTML +=`
+        <div class=" card text-bg-dark border-light container-fluid" style="width: 20rem;">
+        <h4>${data.name}</h4>
+        <img src="${data.imageUrl}" class="card-img-top" loading="lazy" alt="${data.name}">
+        <div class="card-body">
+          <h5 class="card-text">${data.details}</h5>
+          <h6 class="card-text p-2 text-success">R${data.price}</h6>
+          <center><button type="button" class="btn btn-outline-light" onclick='addToCheckout (${JSON.stringify(index)})'>Add to Cart</button></center>
+        </div>
+      </div> 
+        `
+        
+    })
+}catch(e){
+    location.reload()
+}
+}
 

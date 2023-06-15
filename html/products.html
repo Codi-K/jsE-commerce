@@ -12,7 +12,7 @@
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../css/styles.css">
-  <title>DD - Desktops & Accessories</title>
+  <title>DD - Desktops</title>
 </head>
 
 <body>
@@ -49,7 +49,7 @@
                 <a class="nav-link" aria-current="page" href="../index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="./products.html">Desktops & Accessories</a>
+                <a class="nav-link active" href="./products.html">Desktops</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./checkout.html">Checkout</a>
@@ -73,7 +73,7 @@
     <!-- page heading  -->
     <div class="heading">
       <h2 class="head text-white text-center">
-        Desktops & Accessories
+        Desktops
       </h2>
     </div>
 
@@ -95,20 +95,20 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body text-center">
+                <!-- form spree link-->
                 <form action="https://formspree.io/f/xeqwyaew" method="POST">
                   <label>
-                    Enter Your Name:
-                    <input type="name" name="name" class="inputC" required>
+                    <h5>Enter Your Name:</h5>
+                    <input type="name" name="name" class="inputC" placeholder="Name..." required >
                   </label>
                   <label>
-                    Enter Your Email:
-                    <input type="email" name="email" class="inputC" required>
+                    <h5>Enter Your Email:</h5>
+                    <input type="email" name="email" class="inputC" placeholder="Email..." required>
                   </label>
                   <label>
-                    Enter Your Message:
-                    <input type="text" name="message" class="inputC" required>
+                    <h5>Enter Your Message:</h5>
+                    <input type="text" name="message" class="inputC" placeholder="Message..." required>
                   </label>
-                  <!-- your other form fields go here -->
 
               </div>
               <div class="modal-footer">
@@ -119,11 +119,19 @@
             </div>
           </div>
         </div>
-        <button type="button" class="btn btn-outline-light sortbtn">
-          Sort
-      </button>
+        <!-- Sort/filtering button -->
+        <div class="dropdown">
+          <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Sort
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark text-center">
+            <button class="dropdown-item" class="price" onclick="priceLow()">Price: Lowest</button>
+            <button class="dropdown-item" class="name" onclick="priceHigh()">Price: Highest</button>
+          </ul>
+        </div>
       </div>
     </div>
+    <!-- products from Js -->
     <div class="row text-center  d-flex justify-content-center gap-5 mb-4 m-0 container-fluid" id="product">
 
     </div>
