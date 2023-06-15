@@ -11,7 +11,6 @@ let tempID = 11;
 
 
 // Adding to the a new product
-
 addBtn.addEventListener("click", addProduct);
 
 // Add Button
@@ -90,7 +89,7 @@ function deleteButtons(){
 
 
 
-// Table
+// Display Table
 function adminProducts (){
 deskstopName.forEach((data)=>{
     result.innerHTML +=`

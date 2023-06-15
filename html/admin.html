@@ -40,7 +40,7 @@
                       <a class="nav-link" aria-current="page" href="../index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="./products.html">Desktops & Accessories</a>
+                      <a class="nav-link" href="./products.html">Desktops</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./checkout.html">Checkout</a>
@@ -83,6 +83,7 @@
                           <h1 class="modal-title fs-5" id="exampleModalLabel">Add new Product</h1>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
+                      <!-- Add products  -->
                       <div class="modal-body">
                           <h5>Name</h5>
                           <input type="text"class="modal-input inputN" placeholder="Enter product name...">
@@ -100,6 +101,7 @@
                   </div>
               </div>
           </div>
+          <!-- sort button -->
           <button type="button" class="btn btn-outline-light" onclick="sortDesktop()">
             Sort
         </button>
@@ -115,6 +117,7 @@
                   <th id="edit">Edit</th>
                   <th id=td7>Delete</th>
               </thead>
+              <!-- Display products on table from Js -->
               <tbody id="products">
               </tbody>
           </table>
