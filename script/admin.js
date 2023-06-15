@@ -1,4 +1,4 @@
-// // DOM
+// DOM
 let result = document.querySelector("#products");
 let addBtn = document.querySelector(".newproduct");
 let tempName = document.querySelector(".inputN");
@@ -7,13 +7,10 @@ let tempDet = document.querySelector(".inputD");
 let tempPrice = document.querySelector(".inputP");
 let deskstopName = JSON.parse(localStorage.getItem("desktop")) // getting info from local storage
 let tempID = 11;
-// let editN = document.querySelector(".inputeN")
-// let editI = document.querySelector(".inputeI")
-// let editD = document.querySelector(".inputeD")
-// let editP = document.querySelector(".inputeP")
 
 
-// // Adding to the a new product
+
+// Adding to the a new product
 
 addBtn.addEventListener("click", addProduct);
 
@@ -60,6 +57,7 @@ function Editproduct(item){
     location.reload();
     let start = deskstopName.findIndex( p=>{
         return p.id == item.id
+        
     });
     console.log(start);
     this.name = document.querySelector(`#inputeN${item.id}`).value
@@ -87,6 +85,7 @@ function deleteButtons(){
         deskstopName.splice(start, 1);
         localStorage.setItem('desktop', JSON.stringify(deskstopName))
         adminProducts()
+        console.log(deleteButtons());
     }
 
 
@@ -95,11 +94,11 @@ function deleteButtons(){
 function adminProducts (){
 deskstopName.forEach((data)=>{
     result.innerHTML +=`
-     <tr>
+     <tr class="container-fluid">
         <td id="td2">${data.name}</td>
         <td id="td3"><img class="image-fluid image" src="${data.imageUrl}" loading="lazy" alt="${data.name}"></td>
         <td id="td4">${data.details}</td>
-        <td id="td5">${data.price}</td>
+        <td id="td5" class="text-success">R${data.price}</td>
         <td id="td6">
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-outline-light"  data-bs-toggle="modal" data-bs-target='#editModal${data.id}'>
